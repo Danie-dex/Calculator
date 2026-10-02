@@ -75,10 +75,3 @@ button:last-child {
     background-color: #27ae60;
     color: white;
 }
-
-.model {
-    color: #aaa;
-    text-align: center;
-    font-size: 10px;
-    margin-top: 15px;
-}
