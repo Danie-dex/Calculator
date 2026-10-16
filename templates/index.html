@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Casio Calculator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="calculator">
+
+        <header class="header">
+            <h1>CALCULATOR</h1>
+            <span>STANDARD CALCULATOR</span>
+        </header>
+
+        <section class="screen">
+            <div class="expression">{{ expression }}</div>
+            <div class="result">{{ display }}</div>
+        </section>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" class="buttons">
+
+            <button name="action" value="clear"
+                    class="function">AC</button>
+
+            <button name="action" value="delete"
+                    class="function">DEL</button>
+
+            <button name="action" value="percent"
+                    class="function">%</button>
+
+            <button name="action" value="add:/"
+                    class="operator">÷</button>
+
+            <button name="action" value="add:7">7</button>
+            <button name="action" value="add:8">8</button>
+            <button name="action" value="add:9">9</button>
+
+            <button name="action" value="add:*"
+                    class="operator">×</button>
+
+            <button name="action" value="add:4">4</button>
+            <button name="action" value="add:5">5</button>
+            <button name="action" value="add:6">6</button>
+
+            <button name="action" value="add:-"
+                    class="operator">−</button>
+
+            <button name="action" value="add:1">1</button>
+            <button name="action" value="add:2">2</button>
+            <button name="action" value="add:3">3</button>
+
+            <button name="action" value="add:+"
+                    class="operator">+</button>
+
+            <button name="action" value="add:0">0</button>
+            <button name="action" value="add:."
+                    >.</button>
+
+            <button name="action" value="add:("
+                    class="function">(</button>
+
+            <button name="action" value="add:)"
+                    class="function">)</button>
+
+            <button name="action" value="sqrt"
+                    class="function">√</button>
+
+            <button name="action" value="square"
+                    class="function">x²</button>
+
+            <button name="action" value="add:π"
+                    class="function">π</button>
+
+            <button name="action" value="calculate"
+                    class="equals">=</button>
+
+        </form>
+
+        <footer>SIMPLE CALCULATOR</footer>
+
+    </main>
+
+</body>
+</html>
+
